@@ -1,0 +1,43 @@
+name: Product question / 使用问题
+description: Ask a public question about using Tylina / 询问公开的 Tylina 使用问题
+title: "[Question] "
+labels: [question]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check Tylina's built-in Help and search existing issues first. This form is public; use a minimal example instead of a private document.
+
+        请先查看 Tylina 内置帮助并搜索现有 issue。本表单公开可见，请使用最小示例，不要上传私人文档。
+  - type: input
+    id: version
+    attributes:
+      label: Tylina version / Tylina 版本
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 问题
+      description: What are you trying to do? / 你想完成什么？
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried? / 已经尝试过什么？
+      description: Mention the Help page, menu item, or workflow you already checked / 写明已经查看的帮助页、菜单项或操作方法
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal safe example / 最小且可公开的示例
+      render: typst
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私确认
+      options:
+        - label: This public question contains no confidential or personal information. / 这份公开问题不含机密或个人信息。
+          required: true

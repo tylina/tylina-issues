@@ -1,0 +1,101 @@
+name: Bug report / 问题报告
+description: Report reproducible incorrect behavior in Tylina / 报告可以复现的异常行为
+title: "[Bug] "
+labels: [bug]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Tylina. This issue will be public. Remove confidential documents, personal information, credentials, and private paths before submitting.
+
+        感谢你帮助改进 Tylina。本 issue 将公开可见；提交前请删除机密文档、个人信息、凭据与私人路径。
+  - type: input
+    id: version
+    attributes:
+      label: Tylina version / Tylina 版本
+      description: Copy the version shown in About Tylina / 请从“关于 Tylina”中复制
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system / 操作系统
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other / 其它
+    validations:
+      required: true
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Architecture / 处理器架构
+      options:
+        - arm64 / Apple silicon
+        - x64 / Intel or AMD 64-bit
+        - Unknown / 不确定
+        - Other / 其它
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / 功能区域
+      options:
+        - Document view / 文档模式
+        - Split or Source / 双栏或源码
+        - Source Lens or Prefix Area / 源码 Lens 或前置源码区
+        - Files, drafts, or workspaces / 文件、草稿或工作区
+        - Import, export, or resources / 导入、导出或资源
+        - Visual tools / 可视化工具
+        - Slides or Presenter / 幻灯片或演示者模式
+        - Installation or startup / 安装或启动
+        - Other / 其它
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened? / 出现了什么问题？
+      description: Describe the visible behavior in one or two clear paragraphs / 用一两段话直接描述可见行为
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Type ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal Typst source / 最小 Typst 源码
+      description: Paste only the smallest safe example needed to reproduce the issue / 只粘贴复现问题所需的最小且可公开示例
+      render: typst
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or logs / 截图或日志
+      description: Drag files here after removing sensitive information / 完成脱敏后可将文件拖到这里
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前确认
+      options:
+        - label: I searched existing issues for the same problem. / 我已经搜索过相同问题。
+          required: true
+        - label: I removed confidential and personal information from this public report. / 我已从这份公开报告中删除机密与个人信息。
+          required: true

@@ -1,0 +1,61 @@
+name: Feature request / 功能建议
+description: Propose an improvement to the Tylina writing workflow / 建议改进 Tylina 的写作流程
+title: "[Feature] "
+labels: [enhancement]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with the writing problem, then describe the behavior you want. Tylina is document-first: proposals should explain where the feature naturally belongs in Document, Split, Lens, or another existing surface.
+
+        请先说明写作问题，再描述希望出现的行为。Tylina 以文档为中心，请说明功能应如何进入文档、双栏、Lens 或其它现有界面。
+  - type: textarea
+    id: problem
+    attributes:
+      label: Writing problem / 写作问题
+      description: What are you trying to accomplish, and what is difficult today? / 你想完成什么，目前困难在哪里？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior / 希望的行为
+      description: Describe the interaction rather than only naming a command or button / 请描述交互过程，不要只给出命令或按钮名称
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Best location / 最适合的位置
+      options:
+        - Document view / 文档模式
+        - Split or Source / 双栏或源码
+        - Source Lens or Prefix Area / 源码 Lens 或前置源码区
+        - Files, drafts, or workspaces / 文件、草稿或工作区
+        - Import, export, or resources / 导入、导出或资源
+        - Visual tools / 可视化工具
+        - Slides or Presenter / 幻灯片或演示者模式
+        - Application-wide / 整个应用
+        - Not sure / 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example document or workflow / 示例文档或流程
+      description: A concrete example helps evaluate whether the feature fits Tylina / 具体例子有助于判断功能是否适合 Tylina
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current alternatives / 当前替代方法
+      description: How do you handle this today? / 你目前如何完成这件事？
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting / 提交前确认
+      options:
+        - label: I searched existing issues for a similar request. / 我已经搜索过类似建议。
+          required: true
+        - label: I removed confidential and personal information from this public request. / 我已从这份公开建议中删除机密与个人信息。
+          required: true

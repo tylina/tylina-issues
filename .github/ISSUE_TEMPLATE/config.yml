@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Tylina website / Tylina 网站
+    url: https://tylina.github.io/
+    about: Product overview, downloads, and privacy policy / 产品介绍、下载与隐私条款
+  - name: Security vulnerability / 安全漏洞
+    url: https://github.com/tylina/tylina-issues/security/advisories/new
+    about: Report security issues privately; never post vulnerability details in a public issue / 私密提交安全问题，请勿公开漏洞细节
