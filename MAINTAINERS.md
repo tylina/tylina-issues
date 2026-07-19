@@ -6,7 +6,9 @@ After creating `github.com/tylina/tylina-issues`:
 2. Enable **Settings → Security → Private vulnerability reporting**.
 3. Add repository topics such as `tylina`, `typst`, `feedback`, and `desktop-editor`.
 4. Create `bug`, `enhancement`, `question`, `needs-info`, and `confirmed` labels if those workflow states are useful.
-5. Use GitHub Releases for public installers only after checking every asset and `SHA256SUMS.txt`.
+5. Before pushing a release tag, run the private source repository's non-publishing Release workflow
+   and check every installer plus `SHA256SUMS.txt`. A verified tag build mirrors those assets to this
+   repository automatically; do not upload a separate set by hand.
 
 Release notes should state:
 
